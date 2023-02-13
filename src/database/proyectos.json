@@ -18,6 +18,30 @@
         5
       ],
       "creador": 2
+    },
+    "4": {
+      "titulo": "Proyecto Nuevo2",
+      "descripcion": "Descripción del proyecto 1",
+      "miembros": [
+        1,
+        2,
+        3
+      ],
+      "creador": 1,
+      "createdAt": "2023-02-13T22:52:01.575Z",
+      "updatedAt": "2023-02-13T22:52:01.575Z"
+    },
+    "5": {
+      "titulo": "Proyecto Nuevo2",
+      "descripcion": "Descripción del proyecto 1",
+      "miembros": [
+        1,
+        2,
+        3
+      ],
+      "creador": 1,
+      "createdAt": "2023-02-13T22:53:27.944Z",
+      "updatedAt": "2023-02-13T22:53:27.944Z"
     }
   }
 }

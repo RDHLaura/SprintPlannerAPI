@@ -28,7 +28,9 @@ const deleteTask = (id) => {
 
 const createTask = ( newTask) => {
 
-  const id = Object.keys(data.tareas).length +1
+  const last = Number(Object.keys(data.tareas)[Object.keys(data.tareas).length-1]);
+  const id = last + 1;
+
 
   //se almacena en la bd
   data.tareas[id] = newTask;

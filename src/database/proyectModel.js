@@ -28,7 +28,8 @@ const deleteProyect = (id) => {
 
 const createProyect = (newProyect) => {
 
-  const id = Object.keys(data.proyectos).length +1
+  const last = Number(Object.keys(data.proyectos)[Object.keys(data.proyectos).length-1]);
+  const id = last + 1;
 
   //se almacena en la bd
   data.proyectos[id] = newProyect;
