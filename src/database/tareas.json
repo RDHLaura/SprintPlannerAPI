@@ -1,0 +1,44 @@
+{
+  "tareas": {
+    "1": {
+      "titulo": "Tarea 1",
+      "asignada_a": 1,
+      "descripcion": "Desarrollar la funcionalidad de inicio de sesión",
+      "fecha_entrega": "2023-03-01",
+      "id_proyecto": 1,
+      "estado": "no-empezado"
+    },
+    "2": {
+      "titulo": "tarea 2",
+      "asignada_a": 2,
+      "descripcion": "Diseñar la página de perfil de usuario",
+      "fecha_entrega": "2023-03-15",
+      "id_proyecto": 1,
+      "estado": "en-proceso"
+    },
+    "3": {
+      "titulo": "publicacion3",
+      "asignada_a": 3,
+      "descripcion": "Implementar la funcionalidad de agregar proyectos",
+      "fecha_entrega": "2023-02-28",
+      "id_proyecto": 2,
+      "estado": "terminada"
+    },
+    "4": {
+      "titulo": "publicacion4",
+      "asignada_a": 3,
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae luctus leo. ",
+      "fecha_entrega": "2023-02-28",
+      "id_proyecto": 2,
+      "estado": "terminada"
+    },
+    "5": {
+      "titulo": "publicacion5",
+      "asignada_a": 3,
+      "descripcion": "Pellentesque vehicula pulvinar efficitur. Phasellus consectetur libero in dolor tristique convallis. Cras nunc. ",
+      "fecha_entrega": "2023-02-28",
+      "id_proyecto": 1,
+      "estado": "terminada"
+    }
+  }
+}

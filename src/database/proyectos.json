@@ -1,0 +1,23 @@
+{
+  "proyectos": {
+    "1": {
+      "titulo": "Proyecto 1",
+      "descripcion": "Descripción del proyecto 1",
+      "miembros": [
+        1,
+        2,
+        3
+      ],
+      "creador": 1
+    },
+    "2": {
+      "titulo": "Proyecto 2",
+      "descripcion": "Descripción del proyecto 2",
+      "miembros": [
+        4,
+        5
+      ],
+      "creador": 2
+    }
+  }
+}
