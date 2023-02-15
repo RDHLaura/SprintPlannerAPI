@@ -3,14 +3,22 @@ const fs = require("fs");
 const {paginatedContent, filterContent, dataPaginate, checkfilterTasksByProyect} = require("../utils/filters")
 
 
-const getAllTasks = (filters, url) => {
+const getAllTasks = (params, url) => {
 
-  return {paginate: dataPaginate(filters.page, url, data), content: paginatedContent(filters, filterContent(filters.proyecto, data.tareas, checkfilterTasksByProyect)) }
+  return {
+    paginate: dataPaginate(params.page, url, data.tareas),
+    content: paginatedContent(params, filterContent(params.proyecto, data.tareas, checkfilterTasksByProyect))
+  }
 
 }
 
 const getTask = (id) => {
-  return data.tareas[id];
+  if(data.tareas[id] === undefined)
+    return false
+
+  let task={}
+  task[id] = data.tareas[id]
+  return task;
 }
 
 const deleteTask = (id) => {
@@ -63,7 +71,7 @@ const updateTask = (id, newDataTask) => {
       JSON.stringify(data, null, 2),
       "utf8"
     );
-    return task;
+    return getTask(id);
   }
 }
 

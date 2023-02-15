@@ -4,7 +4,7 @@ const getBaseUrl = (req) => {
 }
 
 const getFullUrl = (req) => {
-  return "full url ==> ",req.protocol + '://' + req.get('host') + req.originalUrl;
+  return req.protocol + '://' + req.get('host') + req.originalUrl.split("?").shift();
 }
 
 

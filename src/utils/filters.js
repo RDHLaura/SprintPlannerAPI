@@ -8,7 +8,7 @@ const paginatedContent = (filters, data) => {
   const page = filters.page || 1
   const perPage = 10;
   const start = (page-1)*perPage;
-  const end = (page) * perPage -1;
+  const end = (page) * perPage;
 
   const content = {}
 
@@ -31,9 +31,9 @@ const paginatedContent = (filters, data) => {
  */
 const dataPaginate = (_page, url, data) => {
 
-  const maxPages = Math.ceil(Object.entries(data).length - 1 / 10);
-  const page = _page || 1
-
+  const maxPages = Math.ceil((Object.entries(data).length) / 10);
+  const page = parseInt(_page) || 1
+  console.log(Math.ceil((21 / 10)))
   let dataPaginate={
     totalPages : maxPages,
     actualPage: page,

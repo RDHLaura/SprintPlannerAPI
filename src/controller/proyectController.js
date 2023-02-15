@@ -6,9 +6,9 @@ const { getFullUrl} = require("../utils/url")
  */
 const getAllProyects = (req, res, next) => {
   const url = getFullUrl(req);
-  let filters = req.query
+  let params = req.query
 
-  const allProyects = proyectService.getAllProyects(filters, url);
+  const allProyects = proyectService.getAllProyects(params, url);
 
   if(Object.keys(allProyects).length !== 0){
     res.send(allProyects);
@@ -24,9 +24,9 @@ const getAllProyects = (req, res, next) => {
  */
 
 const createProyect = (req, res, next) => {
-
   //body de la petición http
   const { body } = req;
+  console.log(body)
 
   if(!body.titulo || !body.descripcion || !body.miembros || !body.creador)
     res.status(400).send({mensaje: "Faltan datos"});
@@ -77,27 +77,17 @@ const updateProyect = (req, res, next) => {
   const { id } = req.params;
   //extraigo los datos del body de la petición
   const {body} = req;
-  const today = new Date().toISOString();
 
   //compruebo que el proyecto existe
   const existProyect = proyectService.getProyect(id);
 
   if (existProyect) {
-
-    //creo el nuevo producto actualizado
-    const newProyect = {
-      ...existProyect,
-      ...body,
-      updatedAt: today
-    }
-
-    const updatedProyect = proyectService.updateProyect(id, newProyect)
+    const updatedProyect = proyectService.updateProyect(id, body)
 
     if(updatedProyect)
       res.status(200).send({updatedProyect, mensaje: "Se ha modificado el proyecto."})
     else
       res.status(406).send({mensaje: "Ha ocurrido un error, no se ha podido actualizar el proyecto."})
-
 
   } else
     res.status(404).send({mensaje: "No se encuentra el proyecto."});
@@ -117,7 +107,7 @@ const deleteProyect = (req, res, next) => {
 
   const deletedProyect = proyectService.deleteProyect(id);
 
-  if (deletedProyect)  res.status(200).send({deletedProyect, mensaje:"Proyecto borrado"});
+  if (deletedProyect)  res.status(200).send(deletedProyect);
   else  res.status(404).send({mensaje: "No existe la publicación"});
 
   res.end();

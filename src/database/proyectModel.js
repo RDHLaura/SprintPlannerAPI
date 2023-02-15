@@ -10,9 +10,12 @@ const {paginatedContent, checkfilterProyectsByUser, filterContent, dataPaginate}
  * @returns {{paginate: {next: null, actual: string, previous: null, totalPages: number}, content: {}}} devuelve un objeto con la información de la
  * paginación y otro con los proyectos
  */
-const getAllProyects = (filters, url) => {
+const getAllProyects = (params, url) => {
 
-  return {paginate: dataPaginate(filters.page, url, data), content: paginatedContent(filters, filterContent(filters.user, data.proyectos, checkfilterProyectsByUser)) }
+  return {
+    paginate: dataPaginate(params.page, url, data.proyectos),
+    content: paginatedContent(params, filterContent(params.user, data.proyectos, checkfilterProyectsByUser))
+  }
 }
 
 
@@ -23,7 +26,11 @@ const getAllProyects = (filters, url) => {
  * @returns {*} objeto con los datos del proyecto solicitado
  */
 const getProyect = (id) => {
-  return data.proyectos[id];
+  if(data.proyectos[id]===undefined)
+    return false
+  let proyect = {}
+  proyect[id]= data.proyectos[id];
+  return proyect;
 }
 
 
@@ -71,7 +78,7 @@ const createProyect = (newProyect) => {
     "utf8"
   );
 
-  return newProyect;
+  return getProyect(id);
 }
 
 
@@ -96,7 +103,8 @@ const updateProyect = (id, newDataProyect) => {
       JSON.stringify(data, null, 2),
       "utf8"
     );
-    return proyect;
+    //console.log(getProyect(id))
+    return getProyect(id)
   }
 
 

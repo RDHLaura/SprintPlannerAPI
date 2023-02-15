@@ -7,9 +7,9 @@ const {getFullUrl} = require("../utils/url");
  */
 const getAllTasks = (req, res, next) => {
   const url = getFullUrl(req);
-  let filters = req.query
+  let params = req.query
 
-  const allTasks = taskService.getAllTask(filters, url);
+  const allTasks = taskService.getAllTask(params, url);
 
   if(Object.keys(allTasks).length !== 0){
     res.send(allTasks);
@@ -80,21 +80,12 @@ const updateTask = (req, res, next) => {
   const { id } = req.params;
   //extraigo los datos del body de la petición
   const {body} = req;
-  const today = new Date().toISOString();
 
   //compruebo que el proyecto existe
   const existTask = taskService.getTask(id);
 
   if (existTask) {
-
-    //creo el nuevo producto actualizado
-    const newProyect = {
-      ...existTask,
-      ...body,
-      updatedAt: today
-    }
-
-    const updatedTask = taskService.updateTask(id, newProyect)
+    const updatedTask = taskService.updateTask(id, body)
 
     if(updatedTask)
       res.status(200).send({updatedTask, mensaje: "Se ha modificado la tarea."})

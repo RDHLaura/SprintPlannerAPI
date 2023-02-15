@@ -186,14 +186,6 @@
       "id_proyecto": 16,
       "estado": "no-empezado"
     },
-    "24": {
-      "titulo": "Desarrollar una aplicación móvil",
-      "descripcion": "Crear una aplicación para iOS y Android que permita a los usuarios hacer pedidos en línea",
-      "asignada_a": 3,
-      "fecha_entrega": "2023-03-25",
-      "id_proyecto": 14,
-      "estado": "no-empezado"
-    },
     "25": {
       "titulo": "Actualizar la base de datos",
       "descripcion": "Agregar nuevos campos a la tabla de usuarios y mejorar la eficiencia de las consultas",
@@ -203,5 +195,4 @@
       "estado": "terminada"
     }
   }
-
 }

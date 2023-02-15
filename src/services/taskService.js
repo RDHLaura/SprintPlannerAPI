@@ -1,8 +1,9 @@
 const taskModel = require("../database/taskModel");
+const proyectModel = require("../database/proyectModel");
 
 
-const getAllTask = (filters, url) => {
-  return taskModel.getAllTasks(filters, url);
+const getAllTask = (params, url) => {
+  return taskModel.getAllTasks(params, url);
 };
 
 
@@ -17,8 +18,7 @@ const createTask = (newTask) => {
   //Creo el nuevo objeto, estableciendo fecha de creación y de modificación
   newTask = {
     ...newTask,
-    createdAt: today,
-    updatedAt: today,
+    createdAt: today
   };
 
   return taskModel.createTask(newTask);
@@ -31,15 +31,15 @@ const deleteTask = (id) => {
   if(!exist)//Si esa tarea no existe en la base de datos, devuelvo false
     return false
   else{
-    return taskModel.deleteTask(id);
+    return taskModel.deleteTask(id)
   }
 
 };
 
 const updateTask = (id, newDataTask) => {
   let today = new Date().toISOString();
+  let oldtask = Object.values(taskModel.getTask(id))[0];
 
-  let oldtask = taskModel.getTask(id);
   //"Construyo" el nuevo objeto, estableciendo un id
   let newTask = {
     ...oldtask,

@@ -1,10 +1,11 @@
 const proyectModel = require("../database/proyectModel");
-const taskService = require("../services/taskService")
+const dataTask = require("../database/tareas.json")
+const taskService = require("./taskService")
 
 
-const getAllProyects = (filters, url) => {
+const getAllProyects = (params, url) => {
 
-  return proyectModel.getAllProyects(filters, url);
+  return proyectModel.getAllProyects(params, url);
 };
 
 
@@ -19,8 +20,7 @@ const createProyect = (newProduct) => {
   //Creo el nuevo objeto, estableciendo fecha de creación y de modificación
   newProduct = {
     ...newProduct,
-    createdAt: today,
-    updatedAt: today,
+    createdAt: today
   };
 
   return proyectModel.createProyect(newProduct);
@@ -30,28 +30,34 @@ const deleteProyect = (id) => {
 
   //Compruebo si el proyecto existe
   const exist = getProyect(id);
-  if(!exist)//Si ese producto no existe en la base de datos, devuelvo false
+
+  if(!exist)
     return false
+
   else{
     //borro las tareas que pertenezcan al proyecto
-    const allTask = taskService.getAllTask();
+    const allTask = dataTask.tareas;
+    const deletedTask = []
+    Object.entries(allTask).map(task => {
+      if(task[1].id_proyecto==id){
+        deletedTask.push(taskService.deleteTask(task[0]))
+      }
+    })
 
-    for (const [key, value] of Object.entries(allTask)) {
-      (value.id_proyecto==id) && taskService.deleteTask(key)
-    }
 
     //elimino el proyecto
     const proyect = proyectModel.deleteProyect(id);
-    return proyect
+
+    return {deletedProyect: proyect, deletedTask: deletedTask, mensaje:"Proyecto borrado"}
   }
 
 };
 
 const updateProyect = (id, newDataProyect) => {
   let today = new Date().toISOString();
+  let oldproyect = Object.values(proyectModel.getProyect(id))[0];
 
-  let oldproyect = proyectModel.getProyect(id);
-  //"Construyo" el nuevo objeto, estableciendo un id
+  //Actualizo el proyecto existente con los nuevos datos
   let newProyect = {
     ...oldproyect,
     ...newDataProyect,
