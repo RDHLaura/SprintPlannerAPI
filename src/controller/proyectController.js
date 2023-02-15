@@ -1,22 +1,17 @@
 const proyectService = require("../services/proyectService");
-const {getBaseUrl, getFullUrl} = require("../utils/functions")
+const { getFullUrl} = require("../utils/url")
 
 /**
  * GET /api/v1/proyectos
  */
 const getAllProyects = (req, res, next) => {
   const url = getFullUrl(req);
-  let page = req.query.page
-  if(page === undefined)
-    page = 1;
+  let filters = req.query
 
-  const allProyects = proyectService.getAllProyects(page, url);
-
-
-
+  const allProyects = proyectService.getAllProyects(filters, url);
 
   if(Object.keys(allProyects).length !== 0){
-    res.send({allProyects, mensaje: "El parametro page es: "+  req.query.page});
+    res.send(allProyects);
   }else{
     res.status(404).send({mensaje: "No existen proyectos."});
   }

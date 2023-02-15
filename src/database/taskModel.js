@@ -1,8 +1,12 @@
 let data = require("./tareas.json");
 const fs = require("fs");
+const {paginatedContent, filterContent, dataPaginate, checkfilterTasksByProyect} = require("../utils/filters")
 
-const getAllTasks = () => {
-  return data.tareas;
+
+const getAllTasks = (filters, url) => {
+
+  return {paginate: dataPaginate(filters.page, url, data), content: paginatedContent(filters, filterContent(filters.proyecto, data.tareas, checkfilterTasksByProyect)) }
+
 }
 
 const getTask = (id) => {

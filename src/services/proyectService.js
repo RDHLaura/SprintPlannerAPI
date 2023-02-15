@@ -1,9 +1,10 @@
 const proyectModel = require("../database/proyectModel");
 const taskService = require("../services/taskService")
-const {all} = require("express/lib/application");
 
-const getAllProyects = (page, url) => {
-  return proyectModel.getAllProyects(page, url);
+
+const getAllProyects = (filters, url) => {
+
+  return proyectModel.getAllProyects(filters, url);
 };
 
 

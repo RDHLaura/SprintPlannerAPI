@@ -1,5 +1,6 @@
 let data = require("./proyectos.json");
 const fs = require("fs");
+const {paginatedContent, checkfilterProyectsByUser, filterContent, dataPaginate} = require("../utils/filters")
 
 
 /**
@@ -9,62 +10,17 @@ const fs = require("fs");
  * @returns {{paginate: {next: null, actual: string, previous: null, totalPages: number}, content: {}}} devuelve un objeto con la información de la
  * paginación y otro con los proyectos
  */
-const getAllProyects = (page, url) => {
-  return {paginate: dataPaginate(page, url), content: paginatedContent(page) }
-}
+const getAllProyects = (filters, url) => {
 
-
-/**
- * @name paginatedContent
- * @description selecciona 10 los proyectos correspondientes a la pág pasada por parámetro
- * @param page Pagina solicitada en parametro de url
- * @returns {{}} devuelve un objeto que contiene los id de los proyectos como claves y el objeto proyecto como valor.
- */
-const paginatedContent = (page) => {
-  const perPage = 10;
-  const start = (page-1)*perPage;
-  const end = (page) * perPage -1;
-  const content = {}
-
-  //selecciona los elementos correspondientes a la pag y formatea la salida
-  Object.entries(data.proyectos).slice(start,end).map((element)=>{
-    content[element[0]] = element[1]
-  })
-
-  return content;
-}
-
-
-/**
- * @name dataPaginate
- * @param page Pagina solicitada en parametro de url
- * @param url url completa donde se hace la petición, para usarla en los datos de la paginación
- * @returns {{next: null, actual: string, previous: null, totalPages: number}} objeto que contiene toda la información de la paginación
- */
-const dataPaginate = (page, url) => {
-  const maxPages = Math.ceil(Object.entries(data.proyectos).length - 1 / 10);
-
-  let dataPaginate={
-    totalPages : maxPages,
-    actual: page,
-    next : null,
-    actual : url + "?page="+ (page),
-    previous : null
-  }
-  if(page != "1")
-    dataPaginate.previous = url + "?page="+ (page-1)
-  if(page != maxPages)
-    dataPaginate.next = url + "?page="+ (page+1)
-
-
-  return dataPaginate
+  return {paginate: dataPaginate(filters.page, url, data), content: paginatedContent(filters, filterContent(filters.user, data.proyectos, checkfilterProyectsByUser)) }
 }
 
 
 /**
  * @name getProyect
- * @param id id del proyecto que se pide
- * @returns {*} el proyecto solicitado
+ * @description devuelve el proyecto
+ * @param id id del proyecto que se ha pasado por parámtro en la url
+ * @returns {*} objeto con los datos del proyecto solicitado
  */
 const getProyect = (id) => {
   return data.proyectos[id];
@@ -73,6 +29,7 @@ const getProyect = (id) => {
 
 /**
  * @name deleteProyect
+ * @description elimina un proyecto concreto
  * @param id id del proyecto a eliminar
  * @returns {*} el proyecto eliminado
  */
@@ -95,8 +52,9 @@ const deleteProyect = (id) => {
 
 /**
  * @name createProyect
+ * @description crea un proyecto con los datos que recibe
  * @param newProyect datos de proyecto a crear
- * @returns {*} devuelve el objeto proyecto creado
+ * @returns {*} devuelve un objeto con los datos del proyecto creado
  */
 const createProyect = (newProyect) => {
 

@@ -49,6 +49,159 @@
       "estado": "no-empezado",
       "createdAt": "2023-02-13T22:43:08.626Z",
       "updatedAt": "2023-02-13T22:43:08.626Z"
+    },
+    "7": {
+      "titulo": "Rediseñar la página web de la empresa",
+      "descripcion": "Rediseñar la página web de la empresa para que sea más moderna y atractiva para los clientes",
+      "asignada_a": 9,
+      "fecha_entrega": "2023-03-18",
+      "id_proyecto": 16,
+      "estado": "no-empezado"
+    },
+    "8": {
+      "titulo": "Hacer una presentación para los inversores",
+      "descripcion": "Preparar una presentación en PowerPoint para presentar los resultados financieros de la empresa a los inversores",
+      "asignada_a": 5,
+      "fecha_entrega": "2023-03-10",
+      "id_proyecto": 3,
+      "estado": "en-proceso"
+    },
+    "9": {
+      "titulo": "Desarrollar una estrategia de marketing digital",
+      "descripcion": "Desarrollar una estrategia de marketing digital para aumentar el alcance de la empresa en línea",
+      "asignada_a": 4,
+      "fecha_entrega": "2023-03-22",
+      "id_proyecto": 11,
+      "estado": "no-empezado"
+    },
+    "10": {
+      "titulo": "Actualizar el software de gestión de la empresa",
+      "descripcion": "Actualizar el software de gestión de la empresa para mejorar su eficiencia y velocidad",
+      "asignada_a": 3,
+      "fecha_entrega": "2023-03-08",
+      "id_proyecto": 15,
+      "estado": "en-proceso"
+    },
+    "11": {
+      "titulo": "Lanzar una nueva línea de productos",
+      "descripcion": "Lanzar una nueva línea de productos para diversificar la oferta de la empresa",
+      "asignada_a": 7,
+      "fecha_entrega": "2023-03-25",
+      "id_proyecto": 10,
+      "estado": "no-empezado"
+    },
+    "12": {
+      "titulo": "Mejorar la estrategia de SEO",
+      "descripcion": "Mejorar la estrategia de SEO para que la página web de la empresa aparezca más alto en los resultados de búsqueda",
+      "asignada_a": 2,
+      "fecha_entrega": "2023-03-11",
+      "id_proyecto": 6,
+      "estado": "en-proceso"
+    },
+    "13": {
+      "titulo": "Crear un nuevo folleto de productos",
+      "descripcion": "Crear un nuevo folleto de productos para distribuir a los clientes y promocionar la oferta de la empresa",
+      "asignada_a": 1,
+      "fecha_entrega": "2023-03-14",
+      "id_proyecto": 13,
+      "estado": "no-empezado"
+    },
+    "14": {
+      "titulo": "Desarrollar una campaña de email marketing",
+      "descripcion": "Desarrollar una campaña de email marketing para informar a los clientes sobre las nuevas ofertas y productos de la empresa",
+      "asignada_a": 6,
+      "fecha_entrega": "2023-03-17",
+      "id_proyecto": 2,
+      "estado": "no-empezado"
+    },
+    "15": {
+      "titulo": "Preparar informe financiero",
+      "descripcion": "Revisar estados financieros y preparar informe para la junta directiva",
+      "asignada_a": 4,
+      "fecha_entrega": "2023-03-15",
+      "id_proyecto": 8,
+      "estado": "en-proceso"
+    },
+    "16": {
+      "titulo": "Organizar evento",
+      "descripcion": "Contactar proveedores y organizar logística para evento de la empresa",
+      "asignada_a": 2,
+      "fecha_entrega": "2023-03-20",
+      "id_proyecto": 18,
+      "estado": "no-empezado"
+    },
+    "17": {
+      "titulo": "Desarrollar nuevo producto",
+      "descripcion": "Investigar mercado y desarrollar prototipo de nuevo producto",
+      "asignada_a": 6,
+      "fecha_entrega": "2023-03-31",
+      "id_proyecto": 13,
+      "estado": "en-proceso"
+    },
+    "18": {
+      "titulo": "Revisar diseño de sitio web",
+      "descripcion": "Revisar diseño de sitio web y proponer mejoras para aumentar conversiones",
+      "asignada_a": 3,
+      "fecha_entrega": "2023-03-25",
+      "id_proyecto": 7,
+      "estado": "no-empezado"
+    },
+    "19": {
+      "titulo": "Realizar investigación de mercado",
+      "descripcion": "Realizar investigación de mercado para determinar oportunidades de negocio",
+      "asignada_a": 8,
+      "fecha_entrega": "2023-03-10",
+      "id_proyecto": 11,
+      "estado": "terminada"
+    },
+    "20": {
+      "titulo": "Planificar estrategia de marketing",
+      "descripcion": "Planificar estrategia de marketing para lanzamiento de nuevo producto",
+      "asignada_a": 9,
+      "fecha_entrega": "2023-03-05",
+      "id_proyecto": 16,
+      "estado": "no-empezado"
+    },
+    "21": {
+      "titulo": "Crear manual de usuario",
+      "descripcion": "Crear manual de usuario para nuevo software",
+      "asignada_a": 5,
+      "fecha_entrega": "2023-03-12",
+      "id_proyecto": 5,
+      "estado": "en-proceso"
+    },
+    "22": {
+      "titulo": "Actualizar el sitio web",
+      "descripcion": "Agregar una sección de noticias y eventos recientes en la página de inicio",
+      "asignada_a": 4,
+      "fecha_entrega": "2023-03-15",
+      "id_proyecto": 9,
+      "estado": "en-proceso"
+    },
+    "23": {
+      "titulo": "Rediseñar el logo de la empresa",
+      "descripcion": "Crear un nuevo logo que sea moderno y representativo de la empresa",
+      "asignada_a": 7,
+      "fecha_entrega": "2023-03-20",
+      "id_proyecto": 16,
+      "estado": "no-empezado"
+    },
+    "24": {
+      "titulo": "Desarrollar una aplicación móvil",
+      "descripcion": "Crear una aplicación para iOS y Android que permita a los usuarios hacer pedidos en línea",
+      "asignada_a": 3,
+      "fecha_entrega": "2023-03-25",
+      "id_proyecto": 14,
+      "estado": "no-empezado"
+    },
+    "25": {
+      "titulo": "Actualizar la base de datos",
+      "descripcion": "Agregar nuevos campos a la tabla de usuarios y mejorar la eficiencia de las consultas",
+      "asignada_a": 9,
+      "fecha_entrega": "2023-03-28",
+      "id_proyecto": 5,
+      "estado": "terminada"
     }
   }
+
 }

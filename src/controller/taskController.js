@@ -1,12 +1,15 @@
 const taskService = require("../services/taskService");
+const {getFullUrl} = require("../utils/url");
 
 
 /**
  * GET /api/v1/proyectos
  */
 const getAllTasks = (req, res, next) => {
+  const url = getFullUrl(req);
+  let filters = req.query
 
-  const allTasks = taskService.getAllTask();
+  const allTasks = taskService.getAllTask(filters, url);
 
   if(Object.keys(allTasks).length !== 0){
     res.send(allTasks);

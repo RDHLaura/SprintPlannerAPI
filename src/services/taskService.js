@@ -1,8 +1,8 @@
 const taskModel = require("../database/taskModel");
 
 
-const getAllTask = () => {
-  return taskModel.getAllTasks();
+const getAllTask = (filters, url) => {
+  return taskModel.getAllTasks(filters, url);
 };
 
 
