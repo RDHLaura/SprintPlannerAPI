@@ -1,8 +1,32 @@
 let data = require("./proyectos.json");
 const fs = require("fs");
 
-const getAllProyects = () => {
-  return data.proyectos
+const getAllProyects = (page, url) => {
+
+  return {paginate: dataPaginate(page, url), content: paginatedContent(page) }
+
+}
+
+const paginatedContent = (page) => {
+  const perPage = 10;
+  const proyectsInPage = []
+  for (let x = (page-1)*perPage; x<(page*perPage); x++){
+    proyectsInPage.push(data.proyectos[x])
+  }
+  return proyectsInPage
+}
+
+const dataPaginate = (page, url) => {
+  const maxPages = Math.ceil(Object.entries(data.proyectos).length - 1 / 10);
+
+  let dataPaginate={
+    totalPages : maxPages,
+    actual: page,
+    next : url + "?page="+ (page+1),
+    actual : url + "?page="+ (page),
+    previous : url + "?page="+ (page-1)
+  }
+  return dataPaginate
 }
 
 const getProyect = (id) => {
@@ -12,6 +36,8 @@ const getProyect = (id) => {
 const deleteProyect = (id) => {
 
   const proyect = getProyect(id);
+
+
 
   //borro el proyecto
   delete data.proyectos[id];

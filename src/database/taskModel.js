@@ -31,7 +31,6 @@ const createTask = ( newTask) => {
   const last = Number(Object.keys(data.tareas)[Object.keys(data.tareas).length-1]);
   const id = last + 1;
 
-
   //se almacena en la bd
   data.tareas[id] = newTask;
 
@@ -62,8 +61,6 @@ const updateTask = (id, newDataTask) => {
     );
     return task;
   }
-
-
 }
 
 

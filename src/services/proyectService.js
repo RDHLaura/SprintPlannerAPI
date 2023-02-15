@@ -1,8 +1,9 @@
 const proyectModel = require("../database/proyectModel");
+const taskService = require("../services/taskService")
+const {all} = require("express/lib/application");
 
-
-const getAllProyects = () => {
-  return proyectModel.getAllProyects();
+const getAllProyects = (page, url) => {
+  return proyectModel.getAllProyects(page, url);
 };
 
 
@@ -31,6 +32,14 @@ const deleteProyect = (id) => {
   if(!exist)//Si ese producto no existe en la base de datos, devuelvo false
     return false
   else{
+    //borro las tareas que pertenezcan al proyecto
+    const allTask = taskService.getAllTask();
+
+    for (const [key, value] of Object.entries(allTask)) {
+      (value.id_proyecto==id) && taskService.deleteTask(key)
+    }
+
+    //elimino el proyecto
     const proyect = proyectModel.deleteProyect(id);
     return proyect
   }
