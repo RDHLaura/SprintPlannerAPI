@@ -22,10 +22,14 @@ const dataPaginate = (page, url) => {
   let dataPaginate={
     totalPages : maxPages,
     actual: page,
-    next : url + "?page="+ (page+1),
+    next : null,
     actual : url + "?page="+ (page),
-    previous : url + "?page="+ (page-1)
+    previous : null
   }
+  if(page != "1")
+    dataPaginate.previous = url + "?page="+ (page-1)
+  if(page != maxPages)
+    dataPaginate.next = url + "?page="+ (page+1)
   return dataPaginate
 }
 
