@@ -29,22 +29,32 @@ const paginatedContent = (filters, data) => {
  * @param data JSON que se quiere paginar
  * @returns {{next: null, actual: string, previous: null, totalPages: number}} objeto que contiene toda la información de la paginación
  */
-const dataPaginate = (_page, url, data) => {
+const dataPaginate = (params, url, data) => {
 
   const maxPages = Math.ceil((Object.entries(data).length) / 10);
-  const page = parseInt(_page) || 1
-  console.log(Math.ceil((21 / 10)))
+  const page = parseInt(params.page) || 1
+
+  let filters = "";
+    if(params.hasOwnProperty('user'))
+      filters += "&user="+params.user
+    if(params.hasOwnProperty('proyecto'))
+      filters+= "&proyecto="+ params.proyecto
+
+
+
+  console.log(filters)
   let dataPaginate={
     totalPages : maxPages,
     actualPage: page,
     next : null,
-    actual : url + "?page="+ (page),
+    actual : url + "?page="+ (page) + filters,
     previous : null
   }
+
   if(page != "1")
-    dataPaginate.previous = url + "?page="+ (page-1)
+    dataPaginate.previous = url + "?page="+ (page-1) + filters
   if(page != maxPages)
-    dataPaginate.next = url + "?page="+ (page+1)
+    dataPaginate.next = url + "?page="+ (page+1) + filters
 
   return dataPaginate
 }
