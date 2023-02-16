@@ -4,10 +4,10 @@ const {paginatedContent, filterContent, dataPaginate, checkfilterTasksByProyect}
 
 
 const getAllTasks = (params, url) => {
-
+  const filteredContent = paginatedContent(params, filterContent(params.proyecto, data.tareas, checkfilterTasksByProyect))
   return {
-    paginate: dataPaginate(params.page, url, data.tareas),
-    content: paginatedContent(params, filterContent(params.proyecto, data.tareas, checkfilterTasksByProyect))
+    paginate: dataPaginate(params.page, url, filteredContent),
+    content: filteredContent
   }
 
 }

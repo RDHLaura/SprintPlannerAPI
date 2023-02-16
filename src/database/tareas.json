@@ -193,6 +193,15 @@
       "fecha_entrega": "2023-03-28",
       "id_proyecto": 5,
       "estado": "terminada"
+    },
+    "26": {
+      "titulo": "Actualizar la base de datos",
+      "descripcion": "Agregar nuevos campos a la tabla de usuarios y mejorar la eficiencia de las consultas",
+      "asignada_a": 9,
+      "fecha_entrega": "2023-03-28",
+      "id_proyecto": 5,
+      "estado": "terminada",
+      "createdAt": "2023-02-16T09:32:06.883Z"
     }
   }
 }
