@@ -11,10 +11,10 @@ const {paginatedContent, checkfilterProyectsByUser, filterContent, dataPaginate}
  * paginación y otro con los proyectos
  */
 const getAllProyects = (params, url) => {
-  const filteredContent = paginatedContent(params, filterContent(params.user, data.proyectos, checkfilterProyectsByUser))
+  const filteredContent = filterContent(params.user, data.proyectos, checkfilterProyectsByUser)
   return {
     paginate: dataPaginate(params.page, url, filteredContent),
-    content: filteredContent
+    content: paginatedContent(params, filteredContent)
   }
 }
 
