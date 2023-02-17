@@ -41,8 +41,6 @@ const dataPaginate = (params, url, data) => {
       filters+= "&proyecto="+ params.proyecto
 
 
-
-  console.log(filters)
   let dataPaginate={
     totalPages : maxPages,
     actualPage: page,
