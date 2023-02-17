@@ -16,9 +16,7 @@ const getTask = (id) => {
   if(data.tareas[id] === undefined)
     return false
 
-  let task={}
-  task[id] = data.tareas[id]
-  return task;
+  return data.tareas[id];
 }
 
 const deleteTask = (id) => {
@@ -42,6 +40,7 @@ const createTask = ( newTask) => {
 
   const last = Number(Object.keys(data.tareas)[Object.keys(data.tareas).length-1]);
   const id = last + 1;
+  newTask.id = id
 
   //se almacena en la bd
   data.tareas[id] = newTask;

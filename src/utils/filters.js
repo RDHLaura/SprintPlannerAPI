@@ -10,11 +10,11 @@ const paginatedContent = (filters, data) => {
   const start = (page-1)*perPage;
   const end = (page) * perPage;
 
-  const content = {}
+  const content = []
 
   //selecciona los elementos correspondientes a la pag y formatea la salida
   Object.entries(data).slice(start, end).map((element)=>{
-    content[element[0]] = element[1]
+    content.push( element[1])
   })
 
   return content;

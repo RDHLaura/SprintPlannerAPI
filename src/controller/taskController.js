@@ -28,7 +28,7 @@ const createtask = (req, res, next) => {
 
   //body de la petición http
   const { body } = req;
-
+  console.log(body)
   if(!body.titulo || !body.descripcion || !body.asignada_a || !body.fecha_entrega || !body.estado)
     res.status(400).send({mensaje: "Faltan datos"});
   else {

@@ -28,9 +28,7 @@ const getAllProyects = (params, url) => {
 const getProyect = (id) => {
   if(data.proyectos[id]===undefined)
     return false
-  let proyect = {}
-  proyect[id]= data.proyectos[id];
-  return proyect;
+  return data.proyectos[id];;
 }
 
 
@@ -67,7 +65,7 @@ const createProyect = (newProyect) => {
 
   const last = Number(Object.keys(data.proyectos)[Object.keys(data.proyectos).length-1]);
   const id = last + 1;
-
+  newProyect.id = id;
   //se almacena en la bd
   data.proyectos[id] = newProyect;
 

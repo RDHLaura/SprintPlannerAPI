@@ -1,6 +1,7 @@
 {
   "tareas": {
     "1": {
+      "id": 1,
       "titulo": "Tarea 1",
       "asignada_a": 1,
       "descripcion": "Desarrollar la funcionalidad de inicio de sesión",
@@ -9,6 +10,7 @@
       "estado": "no-empezado"
     },
     "2": {
+      "id": 2,
       "titulo": "tarea 2",
       "asignada_a": 2,
       "descripcion": "Diseñar la página de perfil de usuario",
@@ -17,6 +19,7 @@
       "estado": "en-proceso"
     },
     "3": {
+      "id": 3,
       "titulo": "publicacion3",
       "asignada_a": 3,
       "descripcion": "Implementar la funcionalidad de agregar proyectos",
@@ -25,6 +28,7 @@
       "estado": "terminada"
     },
     "4": {
+      "id": 4,
       "titulo": "publicacion4",
       "asignada_a": 3,
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae luctus leo. ",
@@ -33,6 +37,7 @@
       "estado": "terminada"
     },
     "5": {
+      "id": 5,
       "titulo": "publicacion5",
       "asignada_a": 3,
       "descripcion": "Pellentesque vehicula pulvinar efficitur. Phasellus consectetur libero in dolor tristique convallis. Cras nunc. ",
@@ -41,6 +46,7 @@
       "estado": "terminada"
     },
     "6": {
+      "id": 6,
       "titulo": "Nuevita",
       "descripcion": "Nueva tarea",
       "asignada_a": 1,
@@ -51,6 +57,7 @@
       "updatedAt": "2023-02-13T22:43:08.626Z"
     },
     "7": {
+      "id": 7,
       "titulo": "Rediseñar la página web de la empresa",
       "descripcion": "Rediseñar la página web de la empresa para que sea más moderna y atractiva para los clientes",
       "asignada_a": 9,
@@ -59,6 +66,7 @@
       "estado": "no-empezado"
     },
     "8": {
+      "id": 8,
       "titulo": "Hacer una presentación para los inversores",
       "descripcion": "Preparar una presentación en PowerPoint para presentar los resultados financieros de la empresa a los inversores",
       "asignada_a": 5,
@@ -67,6 +75,7 @@
       "estado": "en-proceso"
     },
     "9": {
+      "id": "9",
       "titulo": "Desarrollar una estrategia de marketing digital",
       "descripcion": "Desarrollar una estrategia de marketing digital para aumentar el alcance de la empresa en línea",
       "asignada_a": 4,
@@ -75,6 +84,7 @@
       "estado": "no-empezado"
     },
     "10": {
+      "id": "10",
       "titulo": "Actualizar el software de gestión de la empresa",
       "descripcion": "Actualizar el software de gestión de la empresa para mejorar su eficiencia y velocidad",
       "asignada_a": 3,
@@ -83,6 +93,7 @@
       "estado": "en-proceso"
     },
     "11": {
+      "id": "11",
       "titulo": "Lanzar una nueva línea de productos",
       "descripcion": "Lanzar una nueva línea de productos para diversificar la oferta de la empresa",
       "asignada_a": 7,
@@ -91,6 +102,7 @@
       "estado": "no-empezado"
     },
     "12": {
+      "id": "12",
       "titulo": "Mejorar la estrategia de SEO",
       "descripcion": "Mejorar la estrategia de SEO para que la página web de la empresa aparezca más alto en los resultados de búsqueda",
       "asignada_a": 2,
@@ -99,6 +111,7 @@
       "estado": "en-proceso"
     },
     "13": {
+      "id": "13",
       "titulo": "Crear un nuevo folleto de productos",
       "descripcion": "Crear un nuevo folleto de productos para distribuir a los clientes y promocionar la oferta de la empresa",
       "asignada_a": 1,
@@ -107,6 +120,7 @@
       "estado": "no-empezado"
     },
     "14": {
+      "id": "14",
       "titulo": "Desarrollar una campaña de email marketing",
       "descripcion": "Desarrollar una campaña de email marketing para informar a los clientes sobre las nuevas ofertas y productos de la empresa",
       "asignada_a": 6,
@@ -115,6 +129,7 @@
       "estado": "no-empezado"
     },
     "15": {
+      "id": "15",
       "titulo": "Preparar informe financiero",
       "descripcion": "Revisar estados financieros y preparar informe para la junta directiva",
       "asignada_a": 4,
@@ -123,6 +138,7 @@
       "estado": "en-proceso"
     },
     "16": {
+      "id": "16",
       "titulo": "Organizar evento",
       "descripcion": "Contactar proveedores y organizar logística para evento de la empresa",
       "asignada_a": 2,
@@ -131,6 +147,7 @@
       "estado": "no-empezado"
     },
     "17": {
+      "id": "17",
       "titulo": "Desarrollar nuevo producto",
       "descripcion": "Investigar mercado y desarrollar prototipo de nuevo producto",
       "asignada_a": 6,
@@ -139,6 +156,7 @@
       "estado": "en-proceso"
     },
     "18": {
+      "id": "18",
       "titulo": "Revisar diseño de sitio web",
       "descripcion": "Revisar diseño de sitio web y proponer mejoras para aumentar conversiones",
       "asignada_a": 3,
@@ -147,6 +165,7 @@
       "estado": "no-empezado"
     },
     "19": {
+      "id": "19",
       "titulo": "Realizar investigación de mercado",
       "descripcion": "Realizar investigación de mercado para determinar oportunidades de negocio",
       "asignada_a": 8,
@@ -155,6 +174,7 @@
       "estado": "terminada"
     },
     "20": {
+      "id": "20",
       "titulo": "Planificar estrategia de marketing",
       "descripcion": "Planificar estrategia de marketing para lanzamiento de nuevo producto",
       "asignada_a": 9,
@@ -163,6 +183,7 @@
       "estado": "no-empezado"
     },
     "21": {
+      "id": "21",
       "titulo": "Crear manual de usuario",
       "descripcion": "Crear manual de usuario para nuevo software",
       "asignada_a": 5,
@@ -171,6 +192,7 @@
       "estado": "en-proceso"
     },
     "22": {
+      "id": "22",
       "titulo": "Actualizar el sitio web",
       "descripcion": "Agregar una sección de noticias y eventos recientes en la página de inicio",
       "asignada_a": 4,
@@ -179,6 +201,7 @@
       "estado": "en-proceso"
     },
     "23": {
+      "id": "23",
       "titulo": "Rediseñar el logo de la empresa",
       "descripcion": "Crear un nuevo logo que sea moderno y representativo de la empresa",
       "asignada_a": 7,
@@ -187,6 +210,7 @@
       "estado": "no-empezado"
     },
     "25": {
+      "id": "25",
       "titulo": "Actualizar la base de datos",
       "descripcion": "Agregar nuevos campos a la tabla de usuarios y mejorar la eficiencia de las consultas",
       "asignada_a": 9,
@@ -195,6 +219,7 @@
       "estado": "terminada"
     },
     "26": {
+      "id": "26",
       "titulo": "Actualizar la base de datos",
       "descripcion": "Agregar nuevos campos a la tabla de usuarios y mejorar la eficiencia de las consultas",
       "asignada_a": 9,
@@ -202,6 +227,16 @@
       "id_proyecto": 5,
       "estado": "terminada",
       "createdAt": "2023-02-16T09:32:06.883Z"
+    },
+    "27": {
+      "titulo": "tarea nueva",
+      "descripcion": "Diseñar la página de perfil de usuario",
+      "asignada_a": 2,
+      "fecha_entrega": "2023-03-15",
+      "id_proyecto": 1,
+      "estado": "en-proceso",
+      "createdAt": "2023-02-17T10:00:22.235Z",
+      "id": 27
     }
   }
 }
