@@ -6,10 +6,10 @@ const {getFullUrl} = require("../utils/url");
  * GET /api/v1/proyectos
  */
 const getAllTasks = (req, res, next) => {
-  const url = getFullUrl(req);
+  const urlAPI = getFullUrl(req);
   let params = req.query
 
-  const allTasks = taskService.getAllTask(params, url);
+  const allTasks = taskService.getAllTask(params, urlAPI);
 
   if(Object.keys(allTasks).length !== 0){
     res.send(allTasks);
