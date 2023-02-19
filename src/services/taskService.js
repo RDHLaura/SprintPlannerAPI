@@ -31,7 +31,7 @@ const deleteTask = (id) => {
 
 const updateTask = (id, newDataTask) => {
   let today = new Date().toISOString();
-  let oldtask = Object.values(taskModel.getTask(id))[0];
+  let oldtask = taskModel.getTask(id);
 
   //"Construyo" el nuevo objeto, estableciendo un id
   let newTask = {

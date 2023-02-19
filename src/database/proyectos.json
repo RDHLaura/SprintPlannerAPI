@@ -413,15 +413,15 @@
       "id": 37
     },
     "38": {
-      "titulo": "SprintPlanner",
-      "descripcion": "Este es uin proyecto de organización de equipos de desarrollo web",
+      "titulo": "asdad1 modificada 2",
+      "descripcion": "asd1111 3",
       "miembros": [
+        1,
         2,
-        1
+        9
       ],
       "creador": 1,
-      "createdAt": "2023-02-18T16:55:56.556Z",
-      "id": 38
+      "updatedAt": "Sun Feb 19 2023"
     }
   }
 }

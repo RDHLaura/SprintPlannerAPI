@@ -227,16 +227,6 @@
       "id_proyecto": 5,
       "estado": "terminada",
       "createdAt": "2023-02-16T09:32:06.883Z"
-    },
-    "27": {
-      "titulo": "tarea nueva",
-      "descripcion": "Diseñar la página de perfil de usuario",
-      "asignada_a": 2,
-      "fecha_entrega": "2023-03-15",
-      "id_proyecto": 1,
-      "estado": "en-proceso",
-      "createdAt": "Sun Feb 19 2023",
-      "id": 27
     }
   }
 }

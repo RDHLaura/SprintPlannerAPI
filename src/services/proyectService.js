@@ -51,8 +51,8 @@ const deleteProyect = (id) => {
 };
 
 const updateProyect = (id, newDataProyect) => {
-  let today = new Date().toISOString();
-  let oldproyect = Object.values(proyectModel.getProyect(id))[0];
+  let today = new Date().toDateString();
+  let oldproyect = proyectModel.getProyect(id);
 
   //Actualizo el proyecto existente con los nuevos datos
   let newProyect = {
