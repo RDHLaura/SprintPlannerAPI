@@ -4,7 +4,6 @@ const taskService = require("./taskService")
 
 
 const getAllProyects = (params, url) => {
-
   return proyectModel.getAllProyects(params, url);
 };
 
@@ -33,7 +32,6 @@ const deleteProyect = (id) => {
 
   if(!exist)
     return false
-
   else{
     //borro las tareas que pertenezcan al proyecto
     const allTask = dataTask.tareas;
@@ -43,7 +41,6 @@ const deleteProyect = (id) => {
         deletedTask.push(taskService.deleteTask(task[0]))
       }
     })
-
 
     //elimino el proyecto
     const proyect = proyectModel.deleteProyect(id);

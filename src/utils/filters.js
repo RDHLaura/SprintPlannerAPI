@@ -2,10 +2,10 @@
  * @name paginatedContent
  * @description selecciona 10 los proyectos correspondientes a la pág pasada por parámetro
  * @param page Pagina solicitada en parametro de url
- * @returns {{}} devuelve un objeto que contiene los id de los proyectos como claves y el objeto proyecto como valor.
+ * @returns {} devuelve un objeto con los proyectos de la página solicitada.
  */
 const paginatedContent = (filters, data) => {
-  const page = filters.page || 1
+  const page = filters.page || 1 //si no se indica página se devuelve la primera
   const perPage = 10;
   const start = (page-1)*perPage;
   const end = (page) * perPage;
@@ -27,7 +27,7 @@ const paginatedContent = (filters, data) => {
  * @param _page Pagina solicitada en parametro de url
  * @param url url completa donde se hace la petición, para usarla en los datos de la paginación
  * @param data JSON que se quiere paginar
- * @returns {{next: null, actual: string, previous: null, totalPages: number}} objeto que contiene toda la información de la paginación
+ * @returns {next: null, actual: string, previous: null, totalPages: number} objeto que contiene toda la información de la paginación
  */
 const dataPaginate = (params, url, data) => {
 
@@ -40,7 +40,7 @@ const dataPaginate = (params, url, data) => {
     if(params.hasOwnProperty('proyecto'))
       filters+= "&proyecto="+ params.proyecto
 
-
+  //información de la paginación
   let dataPaginate={
     totalPages : maxPages,
     actualPage: page,

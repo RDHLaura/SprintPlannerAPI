@@ -7,7 +7,6 @@ const { getFullUrl} = require("../utils/url")
 const getAllProyects = (req, res, next) => {
   const url = getFullUrl(req);
   let params = req.query
-
   const allProyects = proyectService.getAllProyects(params, url);
 
   if(Object.keys(allProyects).length !== 0){

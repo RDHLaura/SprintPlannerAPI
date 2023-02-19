@@ -6,8 +6,8 @@ const {paginatedContent, checkfilterProyectsByUser, filterContent, dataPaginate}
  * @name getAllProyects
  * @param page la página solicitada
  * @param url url completa donde se hace la petición, para usarla en los datos de la paginación
- * @returns {{paginate: {next: null, actual: string, previous: null, totalPages: number}, content: {}}} devuelve un objeto con la información de la
- * paginación y otro con los proyectos
+ * @returns {{paginate: {next: null, actual: string, previous: null, totalPages: number}, content: {}}} devuelve un objeto que contiene la información de la
+ * paginación y los proyectos
  */
 const getAllProyects = (params, url) => {
   const filteredContent = filterContent(params.user, data.proyectos, checkfilterProyectsByUser)
@@ -38,7 +38,6 @@ const getProyect = (id) => {
  * @returns {*} el proyecto eliminado
  */
 const deleteProyect = (id) => {
-
   const proyect = getProyect(id);
 
   //borro el proyecto
@@ -51,6 +50,7 @@ const deleteProyect = (id) => {
     "utf8"
   );
 
+  //devuelvo el proyecto borrado
   return proyect;
 };
 
@@ -61,10 +61,12 @@ const deleteProyect = (id) => {
  * @returns {*} devuelve un objeto con los datos del proyecto creado
  */
 const createProyect = (newProyect) => {
-
+  //creo el id del nuevo proyecto
+  //almacena el id del último proyecto del JSON
   const last = Number(Object.keys(data.proyectos)[Object.keys(data.proyectos).length-1]);
   const id = last + 1;
   newProyect.id = id;
+
   //se almacena en la bd
   data.proyectos[id] = newProyect;
 
@@ -100,13 +102,10 @@ const updateProyect = (id, newDataProyect) => {
       JSON.stringify(data, null, 2),
       "utf8"
     );
-    //console.log(getProyect(id))
+
     return getProyect(id)
   }
-
-
 }
-
 
 
 module.exports = {

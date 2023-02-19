@@ -92,7 +92,6 @@ const updateTask = (req, res, next) => {
     else
       res.status(406).send({mensaje: "Ha ocurrido un error, no se ha podido actualizar la tarea."})
 
-
   } else
     res.status(404).send({mensaje: "No se encuentra la tarea."});
 
@@ -103,7 +102,6 @@ const updateTask = (req, res, next) => {
 /**
  *DELETE   /api/v1/productos/:prod
  */
-
 const deleteTask = (req, res, next) => {
   //PRIMERO obtengo el parámetro de ruta
   const { id } = req.params;

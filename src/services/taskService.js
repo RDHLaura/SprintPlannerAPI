@@ -1,16 +1,12 @@
 const taskModel = require("../database/taskModel");
-const proyectModel = require("../database/proyectModel");
-
 
 const getAllTask = (params, url) => {
   return taskModel.getAllTasks(params, url);
 };
 
-
 const getTask = (id) => {
   return taskModel.getTask(id);
 };
-
 
 const createTask = (newTask) => {
   const today = new Date().toDateString();
@@ -25,15 +21,12 @@ const createTask = (newTask) => {
 };
 
 const deleteTask = (id) => {
-
   //Compruebo si la tarea existe
   const exist = getTask(id);
   if(!exist)//Si esa tarea no existe en la base de datos, devuelvo false
-    return false
-  else{
-    return taskModel.deleteTask(id)
-  }
-
+    return false;
+  else
+    return taskModel.deleteTask(id);
 };
 
 const updateTask = (id, newDataTask) => {
