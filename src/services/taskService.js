@@ -13,7 +13,7 @@ const getTask = (id) => {
 
 
 const createTask = (newTask) => {
-  const today = new Date().toISOString();
+  const today = new Date().toDateString();
 
   //Creo el nuevo objeto, estableciendo fecha de creación y de modificación
   newTask = {

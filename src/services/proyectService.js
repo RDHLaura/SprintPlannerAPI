@@ -15,7 +15,7 @@ const getProyect = (id) => {
 
 
 const createProyect = (newProduct) => {
-  const today = new Date().toISOString();
+  const today = new Date().toDateString();
 
   //Creo el nuevo objeto, estableciendo fecha de creación y de modificación
   newProduct = {

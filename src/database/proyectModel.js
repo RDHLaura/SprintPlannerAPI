@@ -2,7 +2,6 @@ let data = require("./proyectos.json");
 const fs = require("fs");
 const {paginatedContent, checkfilterProyectsByUser, filterContent, dataPaginate} = require("../utils/filters")
 
-
 /**
  * @name getAllProyects
  * @param page la página solicitada
@@ -13,7 +12,7 @@ const {paginatedContent, checkfilterProyectsByUser, filterContent, dataPaginate}
 const getAllProyects = (params, url) => {
   const filteredContent = filterContent(params.user, data.proyectos, checkfilterProyectsByUser)
   return {
-    paginate: dataPaginate(params, url, filteredContent),
+    pagination: dataPaginate(params, url, filteredContent),
     content: paginatedContent(params, filteredContent)
   }
 }

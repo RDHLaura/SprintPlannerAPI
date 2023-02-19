@@ -23,10 +23,9 @@ const getAllProyects = (req, res, next) => {
  * POST /api/v1/proyectos
  */
 
-const createProyect = (req, res, next) => {
+const createProyect = async (req, res, next) => {
   //body de la petición http
   const { body } = req;
-  console.log(body)
 
   if(!body.titulo || !body.descripcion || !body.miembros || !body.creador)
     res.status(400).send({mensaje: "Faltan datos"});
@@ -38,7 +37,7 @@ const createProyect = (req, res, next) => {
       "miembros": body.miembros,
       "creador": body.creador
     }
-    const createdProyect = proyectService.createProyect(newProyect);
+    const createdProyect = await proyectService.createProyect(newProyect);
 
     if (createdProyect)
       res.status(200).send({createdProyect, mensaje: "Proyecto creado con éxito."});
@@ -49,7 +48,7 @@ const createProyect = (req, res, next) => {
 }
 
 /**
- * GET    /api/v1/productos/:prod
+ * GET  /api/v1/productos/:prod
  */
 
 const getProyect = (req, res, next) => {
