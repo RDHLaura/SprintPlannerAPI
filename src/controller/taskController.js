@@ -1,15 +1,15 @@
 const taskService = require("../services/taskService");
-const {URLAPI} = require("../utils/url");
+const {getFullUrl} = require("../utils/url");
 
 
 /**
  * GET /api/v1/proyectos
  */
 const getAllTasks = (req, res, next) => {
-  //const url = getFullUrl(req);
+  const url = getFullUrl(req);
   let params = req.query
 
-  const allTasks = taskService.getAllTask(params, URLAPI);
+  const allTasks = taskService.getAllTask(params, url);
 
   if(Object.keys(allTasks).length !== 0){
     res.send(allTasks);
