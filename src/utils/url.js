@@ -6,7 +6,7 @@ const getBaseUrl = (req) => {
 
 //devuelve la url completa de la api que se ha usado para la petición
 const getFullUrl = (req) => {
-  return 'https://' + req.get('host') + req.originalUrl.split("?").shift();
+  return req.protocol+'://' + req.get('host') + req.originalUrl.split("?").shift();
 }
 
 
