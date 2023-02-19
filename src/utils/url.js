@@ -7,9 +7,10 @@ const getBaseUrl = (req) => {
 const getFullUrl = (req) => {
   return 'https://' + req.get('host') + req.originalUrl.split("?").shift();
 }
-
+const URLAPI = 'https://sprint-planner-api.onrender.com/api/v1/';
 
 module.exports = {
   getBaseUrl,
   getFullUrl,
+  URL
 }
