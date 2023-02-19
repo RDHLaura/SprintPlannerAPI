@@ -1,5 +1,5 @@
 const proyectService = require("../services/proyectService");
-const { URL} = require("../utils/url")
+const { URLAPI} = require("../utils/url")
 
 /**
  * GET /api/v1/proyectos
@@ -7,7 +7,7 @@ const { URL} = require("../utils/url")
 const getAllProyects = (req, res, next) => {
   //const url = getFullUrl(req);
   let params = req.query
-  const allProyects = proyectService.getAllProyects(params, URL);
+  const allProyects = proyectService.getAllProyects(params, URLAPI);
 
   if(Object.keys(allProyects).length !== 0){
     res.send(allProyects);
