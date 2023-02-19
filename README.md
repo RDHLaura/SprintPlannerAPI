@@ -1,6 +1,6 @@
 # API REST SprintPlanner
 
-Base url: `https://sprint-planner-api.onrender.com/api/v1`
+Base url: [https://sprint-planner-api.onrender.com/api/v1](https://sprint-planner-api.onrender.com)
 
 ```json
 GET https://sprint-planner-api.onrender.com/api/v1/
