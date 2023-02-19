@@ -8,7 +8,7 @@ const cors = require('cors')
 app.use(cors());
 app.use(express.json())
 app.use("/api/v1", routesV1.router)
-
+app.enable('trust proxy')
 
 app.use((err, req, res, next) => {
   console.log("Esta funcion captura todos los erroes de express")
