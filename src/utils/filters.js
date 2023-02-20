@@ -13,7 +13,7 @@ const paginatedContent = (filters, data) => {
   const content = []
 
   //selecciona los elementos correspondientes a la pag y formatea la salida
-  Object.entries(data).sort((a, b) => a.createdAt > b.createdAt ? 1 : -1).slice(start, end).map((element)=>{
+  Object.entries(data).reverse().slice(start, end).map((element)=>{
     content.push( element[1])
   })
 
