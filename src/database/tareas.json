@@ -7,7 +7,8 @@
       "descripcion": "Desarrollar la funcionalidad de inicio de sesión",
       "fecha_entrega": "2023-03-01",
       "id_proyecto": 1,
-      "estado": "no-empezado"
+      "estado": "no-empezado",
+      "createdAt": "2021-06-16T09:32:06.883Z"
     },
     "2": {
       "id": 2,
@@ -16,7 +17,8 @@
       "descripcion": "Diseñar la página de perfil de usuario",
       "fecha_entrega": "2023-03-15",
       "id_proyecto": 1,
-      "estado": "en-proceso"
+      "estado": "en-proceso",
+      "createdAt": "2021-02-16T09:32:06.883Z"
     },
     "3": {
       "id": 3,
@@ -25,7 +27,8 @@
       "descripcion": "Implementar la funcionalidad de agregar proyectos",
       "fecha_entrega": "2023-02-28",
       "id_proyecto": 2,
-      "estado": "terminada"
+      "estado": "terminada",
+      "createdAt": "2022-05-16T09:32:06.883Z"
     },
     "4": {
       "id": 4,
@@ -34,7 +37,8 @@
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae luctus leo. ",
       "fecha_entrega": "2023-02-28",
       "id_proyecto": 2,
-      "estado": "terminada"
+      "estado": "terminada",
+      "createdAt": "2022-09-01T09:32:06.883Z"
     },
     "5": {
       "id": 5,
@@ -43,7 +47,8 @@
       "descripcion": "Pellentesque vehicula pulvinar efficitur. Phasellus consectetur libero in dolor tristique convallis. Cras nunc. ",
       "fecha_entrega": "2023-02-28",
       "id_proyecto": 1,
-      "estado": "terminada"
+      "estado": "terminada",
+      "createdAt": "2023-01-19T09:32:06.883Z"
     },
     "6": {
       "id": 6,
@@ -54,7 +59,7 @@
       "id_proyecto": 2,
       "estado": "no-empezado",
       "createdAt": "2023-02-13T22:43:08.626Z",
-      "updatedAt": "2023-02-13T22:43:08.626Z"
+      "updatedAt": "2023-02-13T22:43:08.626Z",
     },
     "7": {
       "id": 7,
@@ -63,7 +68,8 @@
       "asignada_a": 9,
       "fecha_entrega": "2023-03-18",
       "id_proyecto": 16,
-      "estado": "no-empezado"
+      "estado": "no-empezado",
+      "createdAt": "2023-01-18T09:32:06.883Z"
     },
     "8": {
       "id": 8,
@@ -72,7 +78,8 @@
       "asignada_a": 5,
       "fecha_entrega": "2023-03-10",
       "id_proyecto": 3,
-      "estado": "en-proceso"
+      "estado": "en-proceso",
+      "createdAt": "2023-02-19T09:32:06.883Z"
     },
     "9": {
       "id": "9",
@@ -81,7 +88,8 @@
       "asignada_a": 4,
       "fecha_entrega": "2023-03-22",
       "id_proyecto": 11,
-      "estado": "no-empezado"
+      "estado": "no-empezado",
+      "createdAt": "2023-02-10T09:32:06.883Z"
     },
     "10": {
       "id": "10",
@@ -90,7 +98,8 @@
       "asignada_a": 3,
       "fecha_entrega": "2023-03-08",
       "id_proyecto": 15,
-      "estado": "en-proceso"
+      "estado": "en-proceso",
+      "createdAt": "2023-02-11T09:32:06.883Z"
     },
     "11": {
       "id": "11",
@@ -99,7 +108,8 @@
       "asignada_a": 7,
       "fecha_entrega": "2023-03-25",
       "id_proyecto": 10,
-      "estado": "no-empezado"
+      "estado": "no-empezado",
+      "createdAt": "2023-02-12T09:32:06.883Z"
     },
     "12": {
       "id": "12",
@@ -108,7 +118,8 @@
       "asignada_a": 2,
       "fecha_entrega": "2023-03-11",
       "id_proyecto": 6,
-      "estado": "en-proceso"
+      "estado": "en-proceso",
+      "createdAt": "2023-02-04T09:32:06.883Z"
     },
     "13": {
       "id": "13",
@@ -117,7 +128,8 @@
       "asignada_a": 1,
       "fecha_entrega": "2023-03-14",
       "id_proyecto": 13,
-      "estado": "no-empezado"
+      "estado": "no-empezado",
+      "createdAt": "2023-01-01T09:32:06.883Z"
     },
     "14": {
       "id": "14",
@@ -126,7 +138,8 @@
       "asignada_a": 6,
       "fecha_entrega": "2023-03-17",
       "id_proyecto": 2,
-      "estado": "no-empezado"
+      "estado": "no-empezado",
+      "createdAt": "2022-02-26T09:32:06.883Z"
     },
     "15": {
       "id": "15",
@@ -135,7 +148,8 @@
       "asignada_a": 4,
       "fecha_entrega": "2023-03-15",
       "id_proyecto": 8,
-      "estado": "en-proceso"
+      "estado": "en-proceso",
+      "createdAt": "2023-02-26T09:32:06.883Z"
     },
     "16": {
       "id": "16",
@@ -144,7 +158,8 @@
       "asignada_a": 2,
       "fecha_entrega": "2023-03-20",
       "id_proyecto": 18,
-      "estado": "no-empezado"
+      "estado": "no-empezado",
+      "createdAt": "2022-09-16T09:32:06.883Z"
     },
     "17": {
       "id": "17",
@@ -153,7 +168,8 @@
       "asignada_a": 6,
       "fecha_entrega": "2023-03-31",
       "id_proyecto": 13,
-      "estado": "en-proceso"
+      "estado": "en-proceso",
+      "createdAt": "2023-01-16T09:32:06.883Z"
     },
     "18": {
       "id": "18",
@@ -162,7 +178,8 @@
       "asignada_a": 3,
       "fecha_entrega": "2023-03-25",
       "id_proyecto": 7,
-      "estado": "no-empezado"
+      "estado": "no-empezado",
+      "createdAt": "2021-12-16T09:32:06.883Z"
     },
     "19": {
       "id": "19",
@@ -171,7 +188,8 @@
       "asignada_a": 8,
       "fecha_entrega": "2023-03-10",
       "id_proyecto": 11,
-      "estado": "terminada"
+      "estado": "terminada",
+      "createdAt": "2022-12-16T09:32:06.883Z"
     },
     "20": {
       "id": "20",
@@ -180,7 +198,8 @@
       "asignada_a": 9,
       "fecha_entrega": "2023-03-05",
       "id_proyecto": 16,
-      "estado": "no-empezado"
+      "estado": "no-empezado",
+      "createdAt": "2023-02-16T09:32:06.883Z"
     },
     "21": {
       "id": "21",
@@ -189,7 +208,8 @@
       "asignada_a": 5,
       "fecha_entrega": "2023-03-12",
       "id_proyecto": 5,
-      "estado": "en-proceso"
+      "estado": "en-proceso",
+      "createdAt": "2022-02-16T09:32:06.883Z"
     },
     "22": {
       "id": "22",
@@ -198,7 +218,8 @@
       "asignada_a": 4,
       "fecha_entrega": "2023-03-15",
       "id_proyecto": 9,
-      "estado": "en-proceso"
+      "estado": "en-proceso",
+      "createdAt": "2023-01-16T09:32:06.883Z"
     },
     "23": {
       "id": "23",
@@ -207,7 +228,8 @@
       "asignada_a": 7,
       "fecha_entrega": "2023-03-20",
       "id_proyecto": 16,
-      "estado": "no-empezado"
+      "estado": "no-empezado",
+      "createdAt": "2023-02-06T09:32:06.883Z"
     },
     "25": {
       "id": "25",
@@ -216,7 +238,8 @@
       "asignada_a": 9,
       "fecha_entrega": "2023-03-28",
       "id_proyecto": 5,
-      "estado": "terminada"
+      "estado": "terminada",
+      "createdAt": "2023-02-14T09:32:06.883Z"
     },
     "26": {
       "id": "26",
