@@ -31,7 +31,7 @@ const paginatedContent = (filters, data) => {
  */
 const dataPaginate = (params, url, data) => {
 
-  const maxPages = Math.ceil((Object.entries(data).length) / 10);
+  const maxPages = Math.ceil((Object.entries(data).length) / 10) || 1;
   const page = parseInt(params.page) || 1
 
   let filters = "";
@@ -51,7 +51,7 @@ const dataPaginate = (params, url, data) => {
 
   if(page != "1")
     dataPaginate.previous = url + "?page="+ (page-1) + filters
-  if(page != maxPages)
+  if(page < maxPages)
     dataPaginate.next = url + "?page="+ (page+1) + filters
 
   return dataPaginate
